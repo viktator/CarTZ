@@ -1,0 +1,30 @@
+header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: rgba(47, 124, 249,.6);
+  text-align: center;
+    .ant-input {
+      padding-top: 6px;
+      padding-bottom: 5px;
+      padding-left: 7px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border: none;
+      box-shadow: 0 0 7px rgba(0,0,0,.6);
+      &:focus {
+        outline: none;
+      }
+    }
+
+  .ant-btn {
+    padding: 5px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    box-shadow: 2px 0 7px rgba(0,0,0,.6);
+    background: rgba(239, 158, 71, .9)
+  }
+  .error {
+    color: red;
+  }
+}
