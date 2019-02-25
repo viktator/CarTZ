@@ -6,9 +6,9 @@ import Loader from "../Loader";
 
 function Main(props) {
     const data = props.carInfo
-    console.log("mai data",data)
 
-    if (props.loading || !data) return <Loader />
+    if (props.loading) return <Loader />
+     else if (!data) return ''
 
     if (props.loading.hasOwnProperty('error'))
         return <div className={'error'}>Invalid number</div>
@@ -17,18 +17,22 @@ function Main(props) {
         <main>
             <table>
                 <tbody>
-                <tr>
-                    <th>Owner</th>
-                    <th>Year</th>
-                    <th>CrashesCount</th>
-                    <th>OwnersCount</th>
-                </tr>
-                <tr>
-                    <td>{data.owner}</td>
-                    <td>{data.year}</td>
-                    <td>{data.crashesCount}</td>
-                    <td>{data.ownersCount}</td>
-                </tr>
+                    <tr>
+                        <td>Owner</td>
+                        <td>{data.owner}</td>
+                    </tr>
+                    <tr>
+                        <td>Year</td>
+                        <td>{data.year}</td>
+                    </tr>
+                    <tr>
+                        <td>CrashesCount</td>
+                        <td>{data.crashesCount}</td>
+                    </tr>
+                    <tr>
+                        <td>OwnersCount</td>
+                        <td>{data.ownersCount}</td>
+                    </tr>
                 </tbody>
             </table>
 
