@@ -10,9 +10,6 @@ function Main(props) {
     if (props.loading) return <Loader />
      else if (!data) return ''
 
-    if (props.loading.hasOwnProperty('error'))
-        return <div className={'error'}>Invalid number</div>
-
     return (
         <main>
             <table>
